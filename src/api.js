@@ -2,8 +2,6 @@ import axios from 'axios';
 
 const Baseurl = 'https://api.coingecko.com/api/v3';
 
-// Add this new function to your existing api.js file
-
 export const getCoinChartData = async ({ id, currency, days }) => {
   const { data } = await axios.get(`${Baseurl}/coins/${id}/market_chart?vs_currency=${currency}&days=${days}`);
   return data.prices;
