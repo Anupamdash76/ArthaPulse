@@ -1,0 +1,15 @@
+/* These three lines are the entry point for all of Tailwind's styles */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Here, we can add project-wide base styles using Tailwind's @layer directive */
+@layer base {
+  body {
+    @apply bg-gray-900 text-gray-100 font-lora; /* Sets default background, text color, and font */
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-montserrat; /* Sets default font for all headings */
+  }
+}
