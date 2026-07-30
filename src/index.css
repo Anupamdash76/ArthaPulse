@@ -1,15 +1,48 @@
-/* These three lines are the entry point for all of Tailwind's styles */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Here, we can add project-wide base styles using Tailwind's @layer directive */
 @layer base {
   body {
-    @apply bg-gray-900 text-gray-100 font-lora; /* Sets default background, text color, and font */
+    @apply bg-navy-900 text-white font-sans antialiased selection:bg-accent selection:text-black min-h-screen;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-montserrat; /* Sets default font for all headings */
+    @apply font-montserrat tracking-tight;
   }
+}
+
+/* Custom scrollbar for modern fintech look */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B1220;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1A2333;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #232E42;
+}
+
+/* Subtle Glassmorphism Utility */
+.glass-panel {
+  background: rgba(26, 35, 51, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-header {
+  background: rgba(11, 18, 32, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }

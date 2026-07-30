@@ -1,18 +1,16 @@
 import React from 'react';
-import { ColorRing } from 'react-loader-spinner';
+import { Activity } from 'lucide-react';
 
 const Loader = () => {
   return (
-    <div className='flex justify-center items-center h-screen'>
-      <ColorRing
-        visible={true}
-        height="100"
-        width="100"
-        ariaLabel="blocks-loading"
-        wrapperStyle={{}}
-        wrapperClass="blocks-wrapper"
-        colors={['#e15b64', '#f47e60', '#f8b26a', '#abbd81', '#849b87']}
-      />
+    <div className="flex flex-col justify-center items-center min-h-[60vh] py-16 gap-4">
+      <div className="relative flex items-center justify-center">
+        <div className="w-14 h-14 rounded-full border-2 border-amber-500/20 border-t-amber-500 animate-spin"></div>
+        <Activity className="w-6 h-6 text-amber-400 absolute animate-pulse" />
+      </div>
+      <p className="text-sm font-medium text-slate-400 font-montserrat tracking-wider uppercase">
+        Fetching Live Market Data...
+      </p>
     </div>
   );
 };
